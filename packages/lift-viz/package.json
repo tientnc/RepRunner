@@ -1,0 +1,15 @@
+{
+  "name": "@reprunner/lift-viz",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@reprunner/fitness-core": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^19.1.1"
+  }
+}

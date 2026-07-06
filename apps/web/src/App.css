@@ -1,0 +1,176 @@
+.app-shell {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 56px 24px 36px;
+}
+
+.hero {
+  margin-bottom: 36px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #ee6c4d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+  margin-bottom: 22px;
+}
+
+.hero p:last-child,
+.quest-copy p,
+.roadmap p {
+  color: #576071;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.quest-card {
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(22, 31, 46, 0.1);
+  border-radius: 32px;
+  box-shadow: 0 24px 80px rgba(22, 31, 46, 0.12);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1.25fr);
+  margin-bottom: 34px;
+  padding: 28px;
+}
+
+.quest-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.quest-copy h2,
+.roadmap h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+
+.lift-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+.lift-tabs button {
+  background: #f4f0ea;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #202838;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 10px 14px;
+  transition: background 160ms ease, border 160ms ease, transform 160ms ease;
+}
+
+.lift-tabs button:hover,
+.lift-tabs button.active {
+  background: #fff;
+  border-color: #202838;
+  transform: translateY(-1px);
+}
+
+.weight-input {
+  color: #202838;
+  display: grid;
+  font-weight: 800;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.weight-input span {
+  align-items: center;
+  background: #202838;
+  border-radius: 18px;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px;
+  width: fit-content;
+}
+
+.weight-input input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 900;
+  outline: 0;
+  width: 110px;
+}
+
+.plate-summary {
+  background: #f7f7f2;
+  border-radius: 18px;
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+  padding: 14px 16px;
+}
+
+.plate-summary strong {
+  font-size: 1.15rem;
+}
+
+.plate-summary span {
+  color: #576071;
+}
+
+.roadmap {
+  margin-top: 28px;
+}
+
+.roadmap-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.roadmap article {
+  background: #fff;
+  border: 1px solid rgba(22, 31, 46, 0.08);
+  border-radius: 24px;
+  padding: 22px;
+}
+
+footer {
+  color: #576071;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  padding-top: 28px;
+}
+
+@media (max-width: 860px) {
+  .quest-card,
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    padding-top: 34px;
+  }
+}

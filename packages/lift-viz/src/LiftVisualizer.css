@@ -1,0 +1,238 @@
+.lift-visualizer {
+  background: #fffaf3;
+  border: 1px solid rgba(32, 40, 56, 0.1);
+  border-radius: 28px;
+  display: grid;
+  margin: 0;
+  overflow: hidden;
+}
+
+.lift-visualizer svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.viz-grid {
+  fill: none;
+  opacity: 0.32;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-width: 10;
+}
+
+.rack,
+.rack-foot,
+.rack-hook,
+.bench-leg {
+  fill: #202838;
+}
+
+.rack-hook {
+  opacity: 0.92;
+}
+
+.bench-pad {
+  fill: #3d5a80;
+}
+
+.bench-pad-top {
+  filter: drop-shadow(0 14px 20px rgba(32, 40, 56, 0.16));
+}
+
+.body-shadow,
+.platform-shadow {
+  fill: rgba(32, 40, 56, 0.16);
+}
+
+.bench-torso,
+.torso {
+  fill: url(#shirtGradient);
+}
+
+.bench-shoulders {
+  fill: none;
+  stroke: #f5d1aa;
+  stroke-linecap: round;
+  stroke-width: 26;
+}
+
+.back-head,
+.head {
+  fill: url(#skinGradient);
+  stroke: #202838;
+  stroke-width: 5;
+}
+
+.top-hair,
+.hair-front {
+  fill: #111827;
+}
+
+.shorts {
+  fill: #1f2a44;
+}
+
+.leg {
+  fill: none;
+  stroke: #202838;
+  stroke-linecap: round;
+  stroke-width: 20;
+}
+
+.shoe {
+  fill: #111827;
+}
+
+.deadlift-arm,
+.squat-arm,
+.bench-forearms path {
+  fill: none;
+  stroke: #f2704e;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 18;
+}
+
+.barbell {
+  animation: bench-press-path 1800ms ease-in-out infinite;
+  transform-origin: center;
+}
+
+.barbell-deadlift {
+  animation-name: deadlift-path;
+}
+
+.barbell-squat {
+  animation-name: squat-path;
+}
+
+.squat-grip-overlay {
+  animation: squat-path 1800ms ease-in-out infinite;
+  transform-origin: center;
+}
+
+.barbell .bar-shaft {
+  stroke: #202838;
+  stroke-linecap: round;
+  stroke-width: 12;
+}
+
+.barbell .bar-sleeve {
+  stroke: #6f7786;
+  stroke-linecap: round;
+  stroke-width: 16;
+}
+
+.bar-collar {
+  fill: #202838;
+}
+
+.grip-hands ellipse {
+  fill: #f2704e;
+  stroke: #202838;
+  stroke-width: 4;
+}
+
+.plate text {
+  fill: rgba(255, 255, 255, 0.86);
+  font-size: 9px;
+  font-weight: 900;
+  pointer-events: none;
+  writing-mode: vertical-rl;
+}
+
+.plate rect {
+  stroke: rgba(248, 239, 224, 0.84);
+  stroke-width: 2;
+}
+
+.plate rect[fill="#e0fbfc"],
+.plate rect[fill="#f2cc8f"] {
+  stroke: rgba(32, 40, 56, 0.22);
+  stroke-width: 1;
+}
+
+.plate-load {
+  animation: load-plate 520ms ease both;
+  opacity: 1;
+  transform: none;
+}
+
+.plate-left {
+  --load-offset: -34px;
+}
+
+.plate-right {
+  --load-offset: 34px;
+}
+
+figcaption {
+  align-items: center;
+  border-top: 1px solid rgba(32, 40, 56, 0.08);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+
+figcaption span {
+  color: #576071;
+  font-size: 0.94rem;
+  text-align: right;
+}
+
+@keyframes load-plate {
+  from {
+    opacity: 0;
+    transform: translateX(var(--load-offset));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bench-press-path {
+  0%,
+  100% {
+    transform: translateY(16px);
+  }
+  45%,
+  65% {
+    transform: translateY(-26px);
+  }
+}
+
+@keyframes deadlift-path {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45%,
+  65% {
+    transform: translateY(-88px);
+  }
+}
+
+@keyframes squat-path {
+  0%,
+  100% {
+    transform: translateY(46px);
+  }
+  45%,
+  65% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barbell,
+  .squat-grip-overlay,
+  .plate-load {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
