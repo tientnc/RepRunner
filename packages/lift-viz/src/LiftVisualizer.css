@@ -80,13 +80,23 @@
   stroke-width: 20;
 }
 
+.thigh {
+  stroke-width: 24;
+}
+
+.shin {
+  stroke-width: 18;
+}
+
 .shoe {
   fill: #111827;
 }
 
 .deadlift-arm,
 .squat-arm,
-.bench-forearms path {
+.upper-arm,
+.forearm,
+.elbow-joint {
   fill: none;
   stroke: #f2704e;
   stroke-linecap: round;
@@ -94,22 +104,26 @@
   stroke-width: 18;
 }
 
-.barbell {
-  animation: bench-press-path 1800ms ease-in-out infinite;
-  transform-origin: center;
+.upper-arm {
+  stroke-width: 20;
 }
 
-.barbell-deadlift {
-  animation-name: deadlift-path;
+.forearm {
+  stroke-width: 16;
 }
 
-.barbell-squat {
-  animation-name: squat-path;
+.elbow-joint {
+  stroke: #202838;
+  stroke-width: 9;
 }
 
-.squat-grip-overlay {
-  animation: squat-path 1800ms ease-in-out infinite;
-  transform-origin: center;
+.bench-arm-rig {
+  filter: drop-shadow(0 5px 7px rgba(32, 40, 56, 0.08));
+}
+
+.squat-torso,
+.deadlift-torso {
+  filter: drop-shadow(0 10px 12px rgba(32, 40, 56, 0.1));
 }
 
 .barbell .bar-shaft {
@@ -194,45 +208,14 @@ figcaption span {
   }
 }
 
-@keyframes bench-press-path {
-  0%,
-  100% {
-    transform: translateY(16px);
-  }
-  45%,
-  65% {
-    transform: translateY(-26px);
-  }
-}
-
-@keyframes deadlift-path {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  45%,
-  65% {
-    transform: translateY(-88px);
-  }
-}
-
-@keyframes squat-path {
-  0%,
-  100% {
-    transform: translateY(46px);
-  }
-  45%,
-  65% {
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .barbell,
-  .squat-grip-overlay,
   .plate-load {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .lift-motion {
+    display: none;
   }
 }
