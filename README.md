@@ -2,6 +2,12 @@
 
 RepRunner is a fitness side-quest app for logging lifts, visualizing barbell plate math, and eventually exploring running routes and training plans.
 
+## Demo
+
+| Bench press | Deadlift | Back squat |
+| --- | --- | --- |
+| ![Bench press barbell visualization](snapshots/bench-225.png) | ![Deadlift barbell visualization](snapshots/deadlift-315.png) | ![Back squat barbell visualization](snapshots/squat-315.png) |
+
 ## Planned shape
 
 - `apps/web`: the main React app
