@@ -1,5 +1,5 @@
 {
-  "name": "@reprunner/web",
+  "name": "@tientnc/web",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reprunner/fitness-core": "0.1.0",
-    "@reprunner/lift-viz": "0.1.0",
+    "@tientnc/fitness-core": "^0.1.0",
+    "@tientnc/lift-viz": "^0.1.0",
     "@vitejs/plugin-react": "^5.0.0",
     "vite": "^7.1.2",
     "react": "^19.1.1",

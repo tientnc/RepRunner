@@ -1,15 +1,35 @@
 {
-  "name": "@reprunner/lift-viz",
+  "name": "@tientnc/lift-viz",
   "version": "0.1.0",
+  "description": "Animated React barbell lift visualizations for RepRunner.",
   "type": "module",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
   },
   "dependencies": {
-    "@reprunner/fitness-core": "0.1.0"
+    "@tientnc/fitness-core": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^19.1.1"
-  }
+  },
+  "sideEffects": [
+    "./src/LiftVisualizer.css"
+  ],
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tientnc/RepRunner.git",
+    "directory": "packages/lift-viz"
+  },
+  "bugs": {
+    "url": "https://github.com/tientnc/RepRunner/issues"
+  },
+  "homepage": "https://github.com/tientnc/RepRunner#readme"
 }

@@ -1,4 +1,4 @@
-import { calculatePlateLoad, LIFTS } from '@reprunner/fitness-core';
+import { calculatePlateLoad, LIFTS } from '@tientnc/fitness-core';
 import './LiftVisualizer.css';
 
 const plateColors = {

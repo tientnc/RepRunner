@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
-import { LiftVisualizer } from '@reprunner/lift-viz';
-import { LIFTS, calculatePlateLoad } from '@reprunner/fitness-core';
+import { LiftVisualizer } from '@tientnc/lift-viz';
+import { LIFTS, calculatePlateLoad } from '@tientnc/fitness-core';
 import './App.css';
 
 const liftOptions = [

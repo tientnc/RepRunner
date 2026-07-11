@@ -1,9 +1,26 @@
 {
-  "name": "@reprunner/fitness-core",
+  "name": "@tientnc/fitness-core",
   "version": "0.1.0",
+  "description": "Shared barbell plate calculations and lift metadata for RepRunner.",
   "type": "module",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
-  }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tientnc/RepRunner.git",
+    "directory": "packages/fitness-core"
+  },
+  "bugs": {
+    "url": "https://github.com/tientnc/RepRunner/issues"
+  },
+  "homepage": "https://github.com/tientnc/RepRunner#readme"
 }
